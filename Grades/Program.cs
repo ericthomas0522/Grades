@@ -10,6 +10,9 @@ namespace Grades
     {
         static void Main(string[] args)
         {
+            GradeBook book = new GradeBook();
+            book.AddGrade(95);
+            book.AddGrade(89);
         }
     }
 }
