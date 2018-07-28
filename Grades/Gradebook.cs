@@ -25,6 +25,24 @@ namespace Grades
         {
             GradeStatistics stats = new GradeStatistics();
 
+            float sum = 0;
+
+            foreach(float grade in grades)
+            {
+                if (grade > stats.HighestGrade)
+                {
+                    stats.HighestGrade = grade;
+                }
+
+                if (grade < stats.LowestGrade)
+                {
+                    stats.LowestGrade = grade;
+                }
+
+                sum += grade;
+            }
+
+            stats.AverageGrade = sum / grades.Count;
 
             return stats;
         }
