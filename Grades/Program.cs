@@ -24,5 +24,15 @@ namespace Grades
             //keeps the program open so I can see the results.
             Console.ReadLine();
         }
+
+        static void WriteResult(string description, int result)
+        {
+            Console.WriteLine(description + ": " + result);
+        }
+
+        static void WriteResult(string description, float result)
+        {
+            Console.WriteLine(description + ": " + result);
+        }
     }
 }
