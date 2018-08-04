@@ -8,7 +8,7 @@ namespace Grades
 {
     class GradeBook
     {
-        public NameChangedDelegate nameChanged;
+        public event NameChangedDelegate nameChanged;
 
         private List<float> grades;
         private string _name;
