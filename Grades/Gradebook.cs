@@ -11,6 +11,24 @@ namespace Grades
 
         List<float> grades = new List<float>();
 
+        private string Name
+        {
+          get
+            {
+                return Name;
+            }
+
+            set
+            {
+                if (!String.IsNullOrEmpty(value))
+                {
+                    Name = value;
+                }
+            }
+        }
+
+
+
         public GradeBook()
         {
 
