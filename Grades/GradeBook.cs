@@ -8,6 +8,7 @@ namespace Grades
 {
     class GradeBook
     {
+        public NameChangedDelegate nameChanged;
 
         List<float> grades = new List<float>();
 
@@ -24,7 +25,7 @@ namespace Grades
                 {
                     if (Name != value)
                     {
-                        //namechanged(name, value)
+                        nameChanged(Name, value);
                     }
                     Name = value;
                 }
