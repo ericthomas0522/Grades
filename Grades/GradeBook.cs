@@ -10,9 +10,9 @@ namespace Grades
     {
         public NameChangedDelegate nameChanged;
 
-        List<float> grades = new List<float>();
+        private List<float> grades;
 
-        private string Name
+        public string Name
         {
           get
             {
@@ -36,7 +36,8 @@ namespace Grades
 
         public GradeBook()
         {
-
+            Name = "empty";
+            grades = new List<float>();
         }
 
         public void AddGrade(float grade)
