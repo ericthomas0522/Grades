@@ -23,10 +23,16 @@ namespace Grades
             WriteResult("Lowest", stats.LowestGrade);
             WriteResult("Average", stats.AverageGrade);
             WriteResult("Highest", (int)stats.HighestGrade);
+            WriteResult("Grade", stats.LetterGrade);
 
 
             //keeps the program open so I can see the results.
             Console.ReadLine();
+        }
+
+         static void WriteResult(string description, string result)
+        {
+            Console.WriteLine("{0}: {1}", description, result);
         }
 
         static void WriteResult(string description, int result)
