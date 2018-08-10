@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ namespace Grades
     {
         public event NameChangedDelegate nameChanged;
 
-        private List<float> grades;
+        protected List<float> grades;
         private string _name;
 
         public string Name
@@ -37,7 +38,13 @@ namespace Grades
             }
         }
 
-
+        public void WriteGrades(TextWriter destination)
+        {
+            for (int i = 0; i < grades.Count; i++)
+            {
+                destination.WriteLine(grades[i]);
+            }
+        }
 
         public GradeBook()
         {
@@ -50,7 +57,7 @@ namespace Grades
             grades.Add(grade);
         }
 
-        public GradeStatistics ComputeStatistics()
+        public virtual GradeStatistics ComputeStatistics()
         {
             GradeStatistics stats = new GradeStatistics();
 
